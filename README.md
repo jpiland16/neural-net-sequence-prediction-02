@@ -34,7 +34,7 @@ echo a random sequence of numbers that repeats.
 
 ## Notes & changelog
 
-### 6/12/2021 - `initial commit`
+### 6/12/2021 - [`initial commit`](https://github.com/jpiland16/neural-net-sequence-prediction-02/tree/c026506cf8ea36945ed4f8db750cc78677f9f543)
 
 Implemented a basic RNN, loosely following 
 [this tutorial at FloydHub](https://blog.floydhub.com/a-beginners-guide-on-recurrent-neural-networks-with-pytorch/).
@@ -44,7 +44,7 @@ What I learned:
    parameter has a different shape than the target-sequence parameter. 
    Specifically, the training input should consist of the following:
 
-     - For each **batch** [^1] in the set of training sequences:
+     - For each **batch**<sup>[1](#batchnote)</sup> in the set of training sequences:
 
        - For each timestep in the sequence
 
@@ -56,7 +56,7 @@ What I learned:
 
  - In contrast, the target sequence should have the following structure:
 
-    - For each **batch** [^1] in the set of output sequences:
+    - For each **batch**<sup>[1](#batchnote)</sup> in the set of output sequences:
 
       - For each timestep in the sequence
         
@@ -82,5 +82,9 @@ Outstanding questions:
 TODO:
  - Attempt to solve some of these questions
  - Modify `Training.py` to be able to train any model
-    
-[^1]: I don't like this use of the term *batch* - because in this case it seems to be referring to a single input sequence.
+
+---
+
+### Footnotes
+
+<a name="batchnote">1</a>: I don't like this use of the term *batch* - because in this case it seems to be actually referring to a single input sequence, rather than a group of input sequences.
